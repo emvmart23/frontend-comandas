@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/Input";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { MouseEvent, useState } from "react";
 import { Control, Controller, FieldValues, Path } from "react-hook-form";
-import { Field, FieldError, FieldLabel } from "./Field";
+import { Field, FieldError, FieldLabel } from "./ui/Field";
 
 interface InputPasswordProps<T extends FieldValues> {
   control: Control<T>;
@@ -15,7 +15,7 @@ interface InputPasswordProps<T extends FieldValues> {
   label: string;
 }
 
-export function InputPassword<T extends FieldValues>({
+export default function InputPassword<T extends FieldValues>({
   control,
   className,
   name,

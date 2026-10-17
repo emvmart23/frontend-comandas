@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/Toast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -55,7 +56,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         spaceGrotesk.variable
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+          {children}
+          <Toaster />
+      </body>
     </html>
   );
 }
